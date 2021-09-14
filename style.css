@@ -1,0 +1,478 @@
+/* font-family: 'Raleway', sans-serif;  */ 
+/* Global Styling */
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* General Styling */
+
+:root {
+    --primary-blue: #0065FC;
+    --secondary-blue: #DEEBFF;
+    --background-grey: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* Typography */ 
+
+.typography1 {
+    margin: 2% 3% 0%;
+}
+
+.text1 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.text2 {
+    font-weight: 400;
+    color: grey;
+    font-size: 20px;
+}
+
+
+
+
+
+/* Section Styling */ 
+
+/* header */ 
+
+/* Desktop navbar */
+
+header {
+    margin: 2% 3% 0%;
+}
+
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-nav li  {
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.desktop-nav .link-color1 {
+    color: grey;
+    font-weight: 700;
+}
+
+.desktop-nav .link-color2 {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+/*
+
+.nav_1 a::after {
+    content: "";
+    position: absolute;
+    background-color: #4585e6;
+    height: 2px;
+    width: 0%;
+    top: 0px;
+    display: inline-block;
+    right: 3px;
+    transition: 0.3s;
+    bottom: 70px;
+}
+
+.nav_1 a:hover {
+    color: var(--primary-blue);
+}
+
+.nav_1 a:hover::after {
+    width: 100%;
+}
+
+*/
+
+/* Mobile Navbar */
+
+
+
+.mobile-nav a {
+    color: grey;
+    font-weight: 700;
+}
+
+.mobile-nav ul {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 0%;
+    gap: 30px;
+}
+
+/*
+
+.mobile-nav a::after {
+    content: "";
+    position: absolute;
+    background-color: lightgrey;
+    height: 2px;
+    width: 100%;
+    top: 40px;
+    display: inline-block;
+    right: 3px;
+    transition: 0.3s;
+    bottom: 0px;
+    margin:0%;
+}
+
+.mobile-nav a:hover {
+    color: var(--primary-blue);
+}
+
+.mobile-nav a:hover::after {
+    width: 100%;
+    background-color: var(--primary-blue);
+}
+
+*/
+
+
+
+@media screen and (min-width:600px) {
+    .mobile-nav  {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    .link-color1 {
+        display: none;
+    }
+}
+
+
+
+
+
+
+/* text */
+
+/* this goes in typography
+
+.text1 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.text2 {
+    font-weight: 400;
+    color: grey;
+    font-size: 26px;
+}
+
+*/ 
+
+/* Search Box */
+
+.search-container {
+    margin: 2% 3% 0%;
+    display: flex;
+    padding: 0%;
+    height: 50px;
+}
+
+.map {
+    width: 60px;
+    border: 1px solid rgba(241, 234, 234, 0.5);
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    padding-right: 13px;
+}
+
+.search-container input {
+    width: 300px;
+    border: 1px solid rgba(241, 234, 234, 0.5);
+}
+
+.search-container .click {
+    width: 125px; 
+    border: 1px solid rgba(241, 234, 234, 0.5);
+    background: #0065FC;
+    color: white;
+    font-size: 20px;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+/* Mobile Search */
+
+.mobile-search {
+    margin: 2% 3% 0%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+
+.map2 {
+    width: 40px;
+    border: 1px solid rgba(241, 234, 234, 0.5);
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    margin: 0%;
+}
+
+.mobile-search input {
+    width: 175px;
+    border: 1px solid rgba(241, 234, 234, 0.5);
+
+}
+
+.mobile-search .click2 {
+    border: 1px solid rgba(241, 234, 234, 0.5);
+    background: var(--primary-blue);
+    color: white;
+    width: 40px;
+    border-radius: 20%;
+}
+
+
+@media screen and (min-width:600px) {
+    .mobile-search {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    .search-container {
+        display: none;
+    }
+}
+
+/* Fliter */
+
+.fliter-container {
+    margin: 2% 3% 0%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    /* height: 40px;
+    width: 40px;
+    background: #DEEBFF;
+    border-radius: 50%; */
+    /* border: 1px solid black; */
+}
+
+.fliter-container p {
+    font-weight: 900;
+}
+
+.fliter-style  {
+    /* height: 40px; */
+    width: 40px;
+    background: #DEEBFF; 
+    border-radius: 50%; 
+    border: 1px solid black;
+    
+}
+
+.fliter-style span {
+    height: 40px;
+    width: 150px;
+    border: 1px solid rgba(241, 234, 234, 0.8);
+    border-radius: 30%;
+}
+
+.fliter-style i {
+    color:#0065FC;
+}
+
+br {
+    width: 5px;
+}
+
+
+/* Mobile view */
+
+
+@media screen and (max-width:600px) {
+    .fliter-container {
+        display: grid;
+    }
+}
+
+
+
+
+/* info  this goes in typography 
+
+
+
+.info-icon {
+    border-radius: 50%;
+    background: white;
+    color: var(--primary-blue);
+}
+*/
+
+/* Main Section */
+
+/* Desktop boxes */
+
+
+.main .flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 3% 0%;
+}
+
+.box-1 {
+    background: var(--background-grey);
+    height: 600px;
+    width: 65%;
+    border-radius: 5%;
+}
+
+.box-2 {
+    background: var(--background-grey);
+    height: 600px;
+    width: 32%;
+    border-radius: 5%;
+}
+
+/* Mobile box */
+
+.mobile-box {
+    background: var(--background-grey);
+    height: 500px;
+    width: 100%;
+}
+
+
+
+
+@media screen and (min-width:600px) {
+    .mobile-box {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .main .flex-container {
+        display: none;
+    }
+}
+
+/* Picture Grid */
+
+.main2 {
+    margin: 2% 3% 0%;
+}
+
+.grid img {
+    height: 200px;
+    width: 200px;
+}
+
+
+.grid {
+    display: flex;
+}
+
+.long-img  img {
+    height: 400px;
+    width: 250px;
+}
+
+.small-img1 img {
+    width: 250px;
+}
+
+.small-img img {
+    width: 250px;
+    height: 150px;
+}
+
+.small-img {
+    padding-bottom: 20px;
+}
+
+figure {
+    border: 2px solid rgba(241, 234, 234, 0.5);
+    border-radius: 5%;
+}
+
+figure img {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+figcaption {
+    padding: 7px;
+}
+
+@media screen and (max-width:600px) {
+    .grid {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+
+footer {
+    background: var(--background-grey);
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.link-column .bold-link a {
+    color:black;
+    font-weight: 700;
+}
+
+.link-column li a {
+    color: grey;
+    font-weight: 700;
+}
+
+.link-column ul li {
+    padding: 10px 0px;
+}
+
+
+
+/* Mobile footer */
+
+
+
+@media screen and (max-width:600px) {
+    footer {
+        flex-direction: column;
+    }
+}
+
