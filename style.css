@@ -9,6 +9,7 @@ body {
     font-family: 'Raleway', sans-serif;
     padding: 0%;
     margin: 0%;
+    max-width: 1550px;
 }
 
 /* General Styling */
@@ -26,7 +27,6 @@ a {
 li {
     list-style: none;
 }
-
 
 /* Typography */ 
 
@@ -46,6 +46,8 @@ li {
     font-size: 16px;
 }
 
+/* info */
+
 .typography2 {
     margin: 2% 3% 0%;
 }
@@ -57,9 +59,9 @@ li {
 }
 
 .info-wrap {
-    width: 32%;
+    width: 28%;
     overflow-wrap: break-word;
-    margin-top: 1%;
+    margin-top: 0%;
 }
 
 .info button {
@@ -80,12 +82,12 @@ li {
     font-weight: 700;
 }
 
-
-
-
-
-
-
+@media screen and (max-width:450px) {
+    .info-wrap {
+        width: 100%;
+    }
+    
+}
 
 /* Section Styling */ 
 
@@ -96,7 +98,6 @@ li {
 header {
     margin: 2% 3% 0%;
 }
-
 
 .desktop-nav {
     display: flex;
@@ -119,12 +120,11 @@ header {
     font-weight: 700;
 }
 
-/*
 
-.nav_1 a::after {
+.nav-style .link-color1::after {
     content: "";
     position: absolute;
-    background-color: #4585e6;
+    background-color: var(--primary-blue);
     height: 2px;
     width: 0%;
     top: 0px;
@@ -134,15 +134,15 @@ header {
     bottom: 70px;
 }
 
-.nav_1 a:hover {
+.nav-style .link-color1:hover {
     color: var(--primary-blue);
 }
 
-.nav_1 a:hover::after {
+.nav-style .link-color1:hover::after {
     width: 100%;
 }
 
-*/
+
 
 /* Mobile Navbar */
 
@@ -188,9 +188,7 @@ header {
 
 */
 
-
-
-@media screen and (min-width:600px) {
+@media screen and (min-width:450px) {
     .mobile-nav  {
         display: none;
     }
@@ -198,34 +196,11 @@ header {
 
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:450px) {
     .link-color1 {
         display: none;
     }
 }
-
-
-
-
-
-
-/* text */
-
-/* this goes in typography
-
-.text1 {
-    font-weight: bold;
-    font-size: 32px;
-    margin-top: 20px;
-}
-
-.text2 {
-    font-weight: 400;
-    color: grey;
-    font-size: 26px;
-}
-
-*/ 
 
 /* Search Box */
 
@@ -282,7 +257,8 @@ header {
 .mobile-search input {
     width: 175px;
     border: 1px solid rgba(241, 234, 234, 0.5);
-
+    padding-left: 0.75em;
+    font-weight: 900;
 }
 
 .mobile-search .click2 {
@@ -294,7 +270,7 @@ header {
 }
 
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:450px) {
     .mobile-search {
         display: none;
     }
@@ -302,7 +278,7 @@ header {
 
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:450px) {
     .search-container {
         display: none;
     }
@@ -318,6 +294,7 @@ header {
     display: flex;
     gap: 40px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .fliter {
@@ -367,88 +344,20 @@ header {
     font-weight: 700;
 }
 
-
-/*
-
-
-.fliter-container {
-    margin: 2% 3% 0%;
-    align-items: center;
-    
-     border: 1px solid black; 
-}
-
-
-
-.fliter3 {
-    display: inline-block;
-}
-
-
-.fliter  {
-    height: 50px;
-    width: 175px;
-    border-radius: 40px;
-    border: 1px solid rgba(20, 19, 19, 0.8);
-    border-left: none;
-}
-
-.filter2 {
-    height: 50px;
-    width: 200px;
-    border-radius: 40px;
-    border: 1px solid rgba(20, 19, 19, 0.8);
-    border-left: none;
-}
-
-.icon  {
-    width: auto;
-    height: 100%;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-radius: 40px;
-    background: #DEEBFF;
-
-}
-
-.text-5 {
-    margin-left: 2px;
-    border: none;
-}
-
-
-*/
-
-
-
-
 /* Mobile view */
 
-/*
-@media screen and (max-width:600px) {
-    .fliter-container {
-        display: grid;
+
+@media screen and (max-width:450px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
-
-*/
-
-
-/* info  this goes in typography 
-
-
-
-.info-icon {
-    border-radius: 50%;
-    background: white;
-    color: var(--primary-blue);
-}
-*/
 
 /* Main Section */
 
 /* Desktop boxes */
-
 
 .main .flex-container {
     display: flex;
@@ -457,49 +366,51 @@ header {
     align-items: center;
 }
 
-
-
-
 .box-1 {
     background: var(--background-grey);
     height: 600px;
     width: 65%;
     border-radius: 5%;
-    
 }
 
 .box-1 h3 {
-    margin: 4% 4%;
+    margin: 1em 3em;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
 }
 
-
 .box-1 h4 {
-    margin: 3% 4%;
+    margin: 1% 3.5em;
+    margin-top: 3em;
 }
 
 .pic-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    overflow: hidden;
+    
 }
 
 .card1 {
     height: 175px;
-    width: 225px;
+    width: 15em;
     background: white;
-    margin-bottom: 50px;
+    margin-bottom: 2em;
     border-radius: 10px;
 }
 
 .card {
     height: 175px;
-    width: 225px;
+    width: 15em;
     background: white;
     border-radius: 10px;
 }
 
 .fit {
     object-fit: cover;
-    height: 100px;
+    height: 60%;
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -574,7 +485,7 @@ header {
 .position {
     display: flex;
     align-items: center;
-    gap: 175px;
+    gap: 50%;
     margin: 4% 4%;
     margin-top: 25px;
     margin-bottom: 0;
@@ -588,17 +499,16 @@ header {
     margin: 1% 4%;
 }
 
-
-
 .card2 {
     height: 135px;
-    width: 300px;
+    width: 85%;
     background: white;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
     margin-left: 8%;
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 
 .fit2 {
@@ -610,27 +520,213 @@ header {
     border:3px solid white;
 }
 
+.card2 h4 {
+    width: 50%;
+    margin: 3% 0%;
+    font-size: 14px;
+}
+
+.card2 p {
+    font-size: 13px;
+    margin: 4% 0%;
+}
+
+.card2 .ratings2 {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    font-size: 12px;
+}
+
+.card2 .ratings2 i {
+    color: #0065FC;
+}
+
+.card2 .grey2 i {
+    color: lightgrey;
+}
+
 /* Mobile box */
 
 .mobile-box {
     background: var(--background-grey);
-    height: 500px;
+    height: 600px;
     width: 100%;
+}
+
+.mobile-grid h3 {
+    margin: 5% 5%;
+}
+
+.mobile-grid h4 {
+    margin: 5% 5%;
+}
+
+.mobile-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.mobile-pic {
+    height: 225px;
+    width: 90%;
+    background: white;
+    border-radius: 5%;
+    box-shadow: 2px 2px lightgrey;
+    border: 1px solid rgba(235, 229, 229, 0.4);
+    margin-bottom: 20px;
+
+}
+
+.fit3 {
+    object-fit: cover;
+    height: 60%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 3px solid white;
+}
+
+.mobile-pic h4 {
+    margin: 1% 4%;
+}
+
+.mobile-pic p {
+    margin: 1% 4%;
+}
+
+.mobile-pic .ratings3 {
+    margin: 2% 4%;
+    font-size: 12px;
+}
+
+.mobile-pic .ratings3 i {
+    color: #0065FC;
+}
+
+.mobile-pic .grey3 i {
+    color: lightgrey; 
 }
 
 
 
+.position2 {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    margin-top: 20px;
+}
 
-@media screen and (min-width:600px) {
-    .mobile-box {
+.grid5 {
+    display: flex;
+    flex-direction: column;
+}
+
+.card6 {
+    height: 135px;
+    /* width: 85%; */
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-left: 8%;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin: 2% 2%;
+}
+
+.fit6 {
+    object-fit: cover;
+    height: 100%;
+    width:40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border:3px solid white;
+}
+
+.card6 h4 {
+    width: 50%;
+    margin: 3% 0%;
+    font-size: 14px;
+}
+
+.card6 p {
+    font-size: 13px;
+    margin: 3% 0%; 
+}
+
+.card6 .ratings6 {
+    margin-top: 4%;
+    margin-bottom: 1%;
+    font-size: 12px; 
+}
+
+.card6 .ratings6 i {
+    color: #0065FC;
+}
+
+.card6 .grey6 i {
+    color: lightgrey;
+}
+
+@media screen and (max-width:450px) {
+    .main .flex-container {
         display: none;
     }
 }
 
-
-@media screen and (max-width:600px) {
-    .main .flex-container {
+@media screen and (min-width:450px) {
+    .mobile-grid {
         display: none;
+    }
+
+    .mobile-grid3 {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:800px) {
+    .position {
+        gap: 100px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .box-1 {
+        width: 90%;
+        margin-bottom: 2em;
+    }
+
+    .box-2 {
+        width: 90%;
+        height: 400px;
+    }
+
+    .position {
+        gap: 25em;
+    }
+
+    .card2 {
+        height: 160px;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:1210px) {
+    /* .tablet {
+        display: none;
+    } */
+
+    .box-1 {
+        height: 1000px;
+    }
+
+    .box-2 {
+        height: 1000px;
     }
 }
 
@@ -644,6 +740,7 @@ header {
 .grid {
     display: flex;
     justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 .card-long {
@@ -722,60 +819,71 @@ header {
     margin-top: 10px;
 }
 
-
-
-
-/*
-
-.grid img {
-    height: 200px;
-    width: 200px;
+.card-long h4 {
+    margin-top: 4%;
+    margin-left: 10%;
 }
 
+.card-small-1 h4 {
+    margin-top: 4%;
+    margin-left: 10%;
+}
 
-.grid {
+.card-small1 h4 {
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.card-small-2 h4 {
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.card-small2 h4 {
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.mobile-columns {
+    margin: 5% 5%;
+}
+
+.mobile-box {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.long-img  img {
-    height: 400px;
-    width: 250px;
-}
-
-.small-img1 img {
-    width: 250px;
-}
-
-.small-img img {
-    width: 250px;
-    height: 150px;
-}
-
-.small-img {
-    padding-bottom: 20px;
-}
-
-figure {
-    border: 2px solid rgba(241, 234, 234, 0.5);
+.card4 {
+    height: 200px;
+    background: white;
     border-radius: 5%;
+    box-shadow: 2px 2px lightgrey;
+    border: 1px solid rgba(235, 229, 229, 0.4);
+    margin-bottom: 20px;
 }
 
-figure img {
+.fit4 {
+    object-fit: cover;
+    height: 75%;
+    width: 100%;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
 }
 
-figcaption {
-    padding: 7px;
+.card4 h4 {
+    margin: 5% 5%;
+    margin-top: 3%;
 }
 
-@media screen and (max-width:600px) {
-    .grid {
-        flex-direction: column;
+/* Mobile view */
+
+@media screen and (max-width:450px) {
+    .main2 {
+       display: none;
     }
+    
 }
-
-*/
 
 /* Footer */
 
@@ -803,15 +911,27 @@ footer {
     padding: 10px 0px;
 }
 
-
-
 /* Mobile footer */
 
-
-
-@media screen and (max-width:600px) {
+@media screen and (max-width:450px) {
     footer {
         flex-direction: column;
+        gap: 50px;
+        line-height: 10px;
+        height: 600px;
     }
 }
 
+@media screen and (min-width:450px) {
+    .mobile-columns {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:850px) {
+    footer {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
