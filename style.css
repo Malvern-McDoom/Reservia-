@@ -297,6 +297,14 @@ header {
     flex-wrap: wrap;
 }
 
+.fliter span:hover {
+    color: var(--primary-blue);
+}
+
+.fliter2 span:hover {
+    color: var(--primary-blue);
+}
+
 .fliter {
     height: 50px;
     width: 160px;
@@ -430,11 +438,13 @@ header {
 .card1 h4 {
     margin: 1% 4%;
     font-size: 14px;
+    color: black;
 }
 
 .card1 p {
     margin: 1% 4%;
     font-size: 12px;
+    color: black;
 }
 
 .card1 .ratings {
@@ -453,11 +463,13 @@ header {
 .card h4 {
     margin: 1% 4%;
     font-size: 14px;
+    color: black;
 }
 
 .card p {
     margin: 1% 4%;
     font-size: 12px;
+    color: black;
 }
 
 .card .ratings {
@@ -524,11 +536,13 @@ header {
     width: 50%;
     margin: 3% 0%;
     font-size: 14px;
+    color: black;
 }
 
 .card2 p {
     font-size: 13px;
     margin: 4% 0%;
+    color: black;
 }
 
 .card2 .ratings2 {
@@ -567,10 +581,14 @@ header {
     align-items: center;
 }
 
+.mobile-view a {
+    width: 90%;
+}
+
 
 .mobile-pic {
     height: 225px;
-    width: 90%;
+    width: 100%;
     background: white;
     border-radius: 5%;
     box-shadow: 2px 2px lightgrey;
@@ -590,10 +608,12 @@ header {
 
 .mobile-pic h4 {
     margin: 1% 4%;
+    color: black;
 }
 
 .mobile-pic p {
     margin: 1% 4%;
+    color: black;
 }
 
 .mobile-pic .ratings3 {
@@ -649,11 +669,13 @@ header {
     width: 50%;
     margin: 3% 0%;
     font-size: 14px;
+    color: black;
 }
 
 .card6 p {
     font-size: 13px;
     margin: 3% 0%; 
+    color: black;
 }
 
 .card6 .ratings6 {
@@ -822,26 +844,31 @@ header {
 .card-long h4 {
     margin-top: 4%;
     margin-left: 10%;
+    color: black;
 }
 
 .card-small-1 h4 {
     margin-top: 4%;
     margin-left: 10%;
+    color: black;
 }
 
 .card-small1 h4 {
     margin-top: 4%;
     margin-left: 10%;
+    color: black;
 }
 
 .card-small-2 h4 {
     margin-top: 4%;
     margin-left: 10%;
+    color: black;
 }
 
 .card-small2 h4 {
     margin-top: 4%;
     margin-left: 10%;
+    color: black;
 }
 
 .mobile-columns {
@@ -874,6 +901,7 @@ header {
 .card4 h4 {
     margin: 5% 5%;
     margin-top: 3%;
+    color: black;
 }
 
 /* Mobile view */
